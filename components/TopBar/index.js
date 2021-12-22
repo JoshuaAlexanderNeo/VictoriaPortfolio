@@ -40,7 +40,7 @@ const ResponsiveAppBar = () => {
   }
 
   return (
-    <AppBar id="app-bar" color={appBarColor} elevation={elevation} >
+    <AppBar position="absolute" id="app-bar" color={appBarColor} elevation={elevation} >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -52,7 +52,7 @@ const ResponsiveAppBar = () => {
               onClick={handleOpenLeftDrawer}
               color="inherit"
             >
-              <MenuIcon style={{color: 'white'}} />
+              <MenuIcon />
             </IconButton>
             <LeftDrawer pages={pages} visible={leftOpen} handleClose={handleCloseLeftDrawer}></LeftDrawer>
           </Box>

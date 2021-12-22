@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Spartan:wght@700&display=swap');
 
-.gradient {
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-    
-}
 
 
 #app-bar {
@@ -11,7 +7,8 @@
 }
 
 .hero-component {
-  height: calc(100vh - 80px);
+  height: 115vh;
+  min-height: 100vh;
 }
 
 .headerLink {
