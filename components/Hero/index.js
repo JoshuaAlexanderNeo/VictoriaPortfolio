@@ -23,7 +23,7 @@ const Hero = ({title, subtitle }) => {
                 mt: -8
             }}
         >
-            <Image src={hero} alt="hero" quality={100} layout="fill" objectFit="cover" />
+            <Image priority src={hero} alt="hero" quality={100} layout="fill" objectFit="cover" />
             <Grid
                 container
                 sx={{
@@ -56,7 +56,7 @@ const Hero = ({title, subtitle }) => {
                         variant="h4"
                         color="common.black"
                         sx={{
-                            ml: 6,
+                            ml: 5,
                             mb: 5,
                             textTransform: "uppercase"
                         }}
@@ -64,14 +64,14 @@ const Hero = ({title, subtitle }) => {
                         {subtitle}
                     </Typography>
                     <Grid container flexDirection="row">
-                        <Grid item xs={1.7}></Grid>
-                        <Grid item xs={9} container justifyContent="center">
+        
+                        <Grid item xs={9} container sx={{ ml:5 }}>
                             <Link
-                                href="/projects"
-                                as="/projects"
+                                href="/Projects"
+                                as="/Projects"
                                 passHref
                             >
-                                <Button variant="contained" color="secondary" size="large"  sx={{justifyContent: 'center', alignItems: 'center' }}>
+                                <Button variant="contained" color="primary" size="large"  sx={{justifyContent: 'center', alignItems: 'center' }}>
                                     View Projects
                                 </Button>
                             </Link>

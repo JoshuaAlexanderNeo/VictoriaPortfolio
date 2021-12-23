@@ -16,7 +16,7 @@ import { useRouter } from 'next/router';
 import LeftDrawer from '../LeftDrawer';
 import isCurrentPage from '../Utils';
 
-const pages = ['Home', 'CV', 'Projects', 'Contact'];
+const pages = ['Home', 'Projects', 'About', 'Contact'];
 
 const ResponsiveAppBar = () => {
 
@@ -64,7 +64,7 @@ const ResponsiveAppBar = () => {
                 href={page === 'Home' ? '/' : '/'.concat(page.replace(/ /g,"_"))}
                 passHref
               >
-                <div className={isCurrentPage(asPath.slice(1), page.replace(/ /g,"_")) ? "activeLink" : 'headerLink'} ><a>{page}</a></div>
+                <div className={isCurrentPage(asPath.slice(1), page.replace(/ /g,"_")) ? "activeLink btn-2" : 'headerLink btn-2'} ><a>{page} </a></div>
               </Link>
             ))}
           </Box>

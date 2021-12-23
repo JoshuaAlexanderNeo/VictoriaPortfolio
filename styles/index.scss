@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Spartan:wght@700&display=swap');
 
+.img-flip {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 
+.clickableLink {
+  cursor: pointer;
+  color: blue !important;
+}
 
 #app-bar {
   width: 100%;
 }
 
 .hero-component {
-  height: 115vh;
+  height: 106vh;
   min-height: 100vh;
 }
 
@@ -25,13 +33,13 @@
 
 .headerLink:after {  
     background: none repeat scroll 0 0 transparent;
-    top: 26px;
+    top: 0px;
     content: "";
     display: block;
-    height: 4px;
+    height: 2px;
     left: 50%;
     position: relative;
-    background: #303f9f;
+    background: #fff;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
     
@@ -61,13 +69,13 @@
 
 .activeLink:after {  
     background: none repeat scroll 0 0 transparent;
-    top: 26px;
+    top: 0px;
     content: "";
     display: block;
-    height: 4px;
+    height: 2px;
     left: 50%;
     position: relative;
-    background: #303f9f;
+    background: #fff;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
     
@@ -128,3 +136,5 @@
     cursor: pointer;
     transition: color .5s;
 }
+
+
