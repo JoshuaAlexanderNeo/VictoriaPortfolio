@@ -10,6 +10,9 @@ let mainTheme = createTheme({
     },
     h4: {
       fontFamily: 'Poiret One',
+    },
+    body2: {
+      fontSize: 24,
     }
 },
   palette: {

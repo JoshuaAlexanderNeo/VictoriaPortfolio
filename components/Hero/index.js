@@ -23,7 +23,7 @@ const Hero = ({title, subtitle }) => {
                 mt: -8
             }}
         >
-            <Image priority src={hero} alt="hero" quality={100} layout="fill" objectFit="cover" />
+            <Image priority src={hero} alt="hero" quality={100} layout="fill" objectFit="cover" placeholder="blur" />
             <Grid
                 container
                 sx={{
@@ -65,18 +65,17 @@ const Hero = ({title, subtitle }) => {
                     </Typography>
                     <Grid container flexDirection="row">
         
-                        <Grid item xs={9} container sx={{ ml:5 }}>
+                        <Grid item xs={9} container sx={{ ml:5 }} style={{maxWidth: "100%", flexBasis: "100%"}}>
                             <Link
                                 href="/Projects"
                                 as="/Projects"
                                 passHref
                             >
-                                <Button variant="contained" color="primary" size="large"  sx={{justifyContent: 'center', alignItems: 'center' }}>
-                                    View Projects
+                                <Button variant="contained" color="primary" size="large"  sx={{justifyContent: 'center', alignItems: 'center'}}>
+                                    <Typography variant="button">View Projects</Typography>
                                 </Button>
                             </Link>
                         </Grid>
-                        <Grid item xs={1.7}></Grid>
                     </Grid>
                 </Grid>
             </Grid>
