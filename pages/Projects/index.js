@@ -59,11 +59,11 @@ export default function Home() {
         {/* VARDZIA HOTEL */}
         <Paper sx={{mt: 15, mb: 10}}>
           <div style={{overflow: 'hidden', padding: "10px"}}>
-            <Image src={Vardzia_hotel_1} alt="Render of Vardzia Hotel" quality={100} objectFit="cover" placeholder="blur" priority  sx={{ mb: "20px" }} style={{borderRadius: "10px"}} />
+            <Image src={Vardzia_hotel_1} alt="Render of Vardzia Hotel" quality={90} objectFit="cover" placeholder="blur" priority  sx={{ mb: "20px" }}/>
           </div>
           <div style={{padding: "10px"}}>
           <Typography variant="h2" gutterBottom>Vardzia Hotel</Typography>
-          <Typography variant="body2" gutterBottom sx={{ml: 2}}>
+          <Typography component={'span'} variant="body2" gutterBottom sx={{ml: 2}}>
             The Vardzia Hotel is located in Abastumani, Georgia and contains three buildings: a new
             building that I helped design and two others that were being renovated by a
             different company.
@@ -90,11 +90,11 @@ export default function Home() {
         </Paper>
         <Paper sx={{mb: 5}}>
         <div style={{overflow: 'hidden', padding: "10px"}}>
-            <Image src={pasha_1} alt="Render of Pasha Bank" quality={100} objectFit="cover" placeholder="blur" sx={{ mb: "20px" }} style={{borderRadius: "10px"}} />
+            <Image src={pasha_1} alt="Render of Pasha Bank" quality={90} objectFit="cover" placeholder="blur" sx={{ mb: "20px" }} />
           </div>
           <div style={{padding: "10px"}}>
           <Typography variant="h2" gutterBottom>Pasha Bank</Typography>
-          <Typography variant="body2" gutterBottom>
+          <Typography component={'span'} variant="body2" gutterBottom>
           The Pasha Bank project is located in Tbilisi and contains two buildings : a bank and a hotel.
           <br></br>
           During the process of this project I was in charge of the following parts:

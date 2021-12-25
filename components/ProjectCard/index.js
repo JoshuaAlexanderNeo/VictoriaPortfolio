@@ -19,7 +19,7 @@ const ProjectCard = ({ title, subtitle, image, alt, link }) => {
                     <CardMedia title={title}
                     >
                         <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-                            <Image src={image} width={345} height={195} />
+                            <Image src={image} alt="A render of a building" width={345} height={195} />
                         </div>
                     </CardMedia>
                     <CardContent>

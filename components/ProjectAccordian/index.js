@@ -20,7 +20,7 @@ const ProjectAccordian = ({ imageList }) => {
             <AccordionDetails>
                 {imageList.map((image, index) => {
                     return (
-                        <Image src={image} key={index} quality={100} objectFit='cover' placeholder="blur"/>
+                        <Image src={image} key={index} alt="A render of a building" quality={100} objectFit='cover' placeholder="blur"/>
                     )
                 })}
             </AccordionDetails>
