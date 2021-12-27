@@ -3,12 +3,12 @@ import Image from 'next/image'
 import TopBar from '../../components/TopBar'
 import * as React from 'react';
 import ProjectCard from '../../components/ProjectCard';
-import Vardzia_hotel_1 from '../../public/g960.png';
+import Vardzia_hotel_1 from '../../public/g960.jpg';
 import Vardzia_hotel_2 from '../../public/g2570.png';
 import Vardzia_hotel_3 from '../../public/g3297.png';
 import Vardzia_hotel_4 from '../../public/g2222.png';
 
-import pasha_1 from '../../public/pasha_1.png';
+import pasha_1 from '../../public/pasha_1.jpg';
 
 import { Container, Card, Grid, Box, Paper, Typography, Divider} from '@mui/material';
 import ProjectAccordian from '../../components/ProjectAccordian';
@@ -85,7 +85,7 @@ export default function Home() {
             </Typography>
             <br></br>
             <br></br>
-          <ProjectAccordian imageList={vardzia}/>
+          <ProjectAccordian imageList={vardzia}/> {/* todo: use this ONLY on mobile, put it on the right on desktop. */}
           </div>
         </Paper>
         <Paper sx={{mb: 5}}>
