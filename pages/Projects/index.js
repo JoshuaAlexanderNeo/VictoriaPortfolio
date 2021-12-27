@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import TopBar from '../../components/TopBar'
 import * as React from 'react';
+import { useState, useEffect } from 'react';
 import ProjectCard from '../../components/ProjectCard';
 import Vardzia_hotel_1 from '../../public/g960.jpg';
 import Vardzia_hotel_2 from '../../public/g2570.png';
@@ -12,10 +13,46 @@ import pasha_1 from '../../public/pasha_1.jpg';
 
 import { Container, Card, Grid, Box, Paper, Typography, Divider} from '@mui/material';
 import ProjectAccordian from '../../components/ProjectAccordian';
+import AccordianOrGrid from '../../components/AccordianOrGrid';
 
+
+function getWindowDimensions() {
+  if (typeof window !== 'undefined') {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  }
+  } else {
+  return {
+    "width": 0,
+    "height": 0
+  }
+  }
+}
+
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowDimensions;
+}
 
 export default function Home() {
-  const vardzia = [Vardzia_hotel_2, Vardzia_hotel_3, Vardzia_hotel_4];
+  const { width=0, height=0 } = useWindowDimensions();
+  console.log(width, height);
+  const vardzia = [{"img": Vardzia_hotel_2, "title": "A B/W render of Varzia Hotel"}, {"img": Vardzia_hotel_3, "title": "A B/W render of Varzia Hotel"}, {"img": Vardzia_hotel_4, "title": "Floorplan of Vardzia Hotel"}];
+  //const pasha = [{"img": pasha_1, "title": "A B/W render of Pasha Hotel"}];
   return (
     <>
       <TopBar />
@@ -85,7 +122,8 @@ export default function Home() {
             </Typography>
             <br></br>
             <br></br>
-          <ProjectAccordian imageList={vardzia}/> {/* todo: use this ONLY on mobile, put it on the right on desktop. */}
+            <AccordianOrGrid width={width} imageList={vardzia}/>
+          
           </div>
         </Paper>
         <Paper sx={{mb: 5}}>
@@ -116,7 +154,7 @@ export default function Home() {
             </Typography>
             <br></br>
             <br></br>
-          <ProjectAccordian imageList={vardzia}/>
+            <AccordianOrGrid width={width} imageList={vardzia}/>
           </div>
         </Paper>
 

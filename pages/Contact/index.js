@@ -23,7 +23,7 @@ export default function Home() {
               <Link passHref href='mailto:SUKYASOVA.VIKA@GMAIL.COM'><Typography className="clickableLink" gutterBottom variant="h5"><EmailIcon color="secondary" sx={{ mb: -2, fontSize: "50px" }} />sukyasova.vika@gmail.com</Typography></Link>
             </div>
             <div style={{ justifyContent: "center", display: "flex", marginTop: "30px" }}>
-              <Image className="img-flip" src={avatar} alt="avatar" quality={100} objectFit="cover" sx={{ mb: "20px" }} />
+              <Image src={avatar} alt="avatar" quality={100} objectFit="cover" sx={{ mb: "20px" }} />
             </div>
           </Grid>
         </Grid>
