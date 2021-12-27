@@ -1,5 +1,6 @@
 import ProjectAccordian from "../ProjectAccordian"
 import { ImageList, ImageListItem } from "@mui/material"
+import Image from "next/image"
 
 const AccordianOrGrid = ({ width, imageList }) => {
     console.log(imageList)
@@ -10,7 +11,7 @@ const AccordianOrGrid = ({ width, imageList }) => {
             <ImageList sx={{ width: 1130, height: 600 }} cols={1} >
             {imageList.map((item) => (
               <ImageListItem key={item.img}>
-                <img
+                <Image width="1130" height="600"
                   src={`${item.img.src}?w=164&h=164&fit=crop&auto=format`}
                   srcSet={`${item.img.src}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                   alt={item.title}
