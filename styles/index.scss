@@ -8,6 +8,9 @@
 .clickableLink {
   cursor: pointer;
   color: blue !important;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 #app-bar {
