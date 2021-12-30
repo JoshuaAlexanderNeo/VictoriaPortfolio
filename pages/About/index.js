@@ -27,11 +27,11 @@ export default function Home() {
           <Grid style={{ textAlign: 'center', justifyContent: 'center', alignItems: 'center' }} container spacing={3} sx={{ padding: '10px' }}>
 
             <Grid item xs={12} md={7} style={{ marginBottom: "30px" }}>
-              <Typography variant="h4">Hi! I'm Victoria. </Typography>
+              <Typography variant="h4">Hi! I&apos;m Victoria. </Typography>
               <Typography variant="body2">I am a junior architect currently located in Tbilisi, Georgia. </Typography>
             </Grid>
             <Grid item xs={12} md={3}>
-              <div style={{ display: "inline-block", borderRadius: '50%', height: '300px', width: '300px', mozBorderRadius: '1em', overflow: 'hidden', justifyContent: 'center' }}>
+              <div style={{ display: "inline-block", borderRadius: '50%', height: '300px', width: '300px', MozBorderRadius: '1em', overflow: 'hidden', justifyContent: 'center' }}>
                 <Image src={headshot} alt="Headshot of Victoria Sukiasova" quality={90} objectFit="cover" placeholder="blur" priority />
               </div>
             </Grid>

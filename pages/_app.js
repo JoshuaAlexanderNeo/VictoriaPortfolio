@@ -20,7 +20,7 @@ export default function MyApp(props) {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
-        <title>Victoria Sukiasova's Portfolio</title>
+        <title>Victoria Sukiasova&apos;s Portfolio</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
