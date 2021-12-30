@@ -7,15 +7,51 @@ import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/private-theming";
 import creative_illustration from "../../public/creative_illustration.svg"
 import hero from "../../public/hero-architecture.png"
+import {useState, useEffect} from "react";
+
+
+function getWindowDimensions() {
+    if (typeof window !== 'undefined') {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height
+    }
+    } else {
+    return {
+      "width": 0,
+      "height": 0
+    }
+    }
+  }
+  
+  function useWindowDimensions() {
+    const [windowDimensions, setWindowDimensions] = useState(
+      getWindowDimensions()
+    );
+  
+    useEffect(() => {
+      function handleResize() {
+        setWindowDimensions(getWindowDimensions());
+      }
+  
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+  
+    return windowDimensions;
+  }
 
 const Hero = ({title, subtitle }) => {
+    const { width=0, height=0 } = useWindowDimensions();
+
 
     return (
 
         <Grid
             component="section"
             container
-            className="hero-component"
+            className={"hero-component " + (width < 1200 ? "mobileBackground" : null)}
             sx={{
                 position: `relative`,
                 width: `100%`,
@@ -23,7 +59,7 @@ const Hero = ({title, subtitle }) => {
                 mt: -8
             }}
         >
-            <Image priority src={hero} alt="hero" quality={100} layout="fill" objectFit="cover" placeholder="blur" />
+            {width > 900 ? <Image priority src={hero} alt="hero" quality={100} layout="fill" objectFit="cover" placeholder="blur" /> : null  }
             <Grid
                 container
                 sx={{
@@ -40,7 +76,7 @@ const Hero = ({title, subtitle }) => {
                     justifyContent="center"
                 >
                     <Typography
-                        variant="h2"
+                        variant="poster"
                         gutterBottom
                         sx={{
                             color: "common.black",
@@ -53,7 +89,7 @@ const Hero = ({title, subtitle }) => {
                     </Typography>
                     <Typography
                         component="p"
-                        variant="h4"
+                        variant="posterSmall"
                         color="common.black"
                         sx={{
                             ml: 5,

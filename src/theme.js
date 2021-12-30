@@ -5,14 +5,16 @@ import '@fontsource/poiret-one'
 // Create a theme instance.
 let mainTheme = createTheme({
   typography: {
-    h2: {
+    poster: {
       fontFamily: 'Baloo 2',
+      fontSize: 55
     },
-    h4: {
+    posterSmall: {
       fontFamily: 'Poiret One',
+      fontSize: 35
     },
     body2: {
-      fontSize: 24,
+      fontSize: 20,
     }
 },
   palette: {

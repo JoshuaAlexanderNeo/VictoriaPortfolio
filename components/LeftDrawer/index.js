@@ -17,17 +17,17 @@ const LeftDrawer = ({visible, handleClose, pages}) => {
        <Box sx={{width: 250}}>
            <List>
                 {pages.map((page, index) => (
+                    <Link
+                    passHref
+                    key={page}
+                    href={page === 'Home' ? '/' : '/'.concat(page.replace(/ /g,"_"))}
+                >
                     <ListItem button className="centeredLink" key={page}>
                         <ListItemText primary={              
-                            <Link
-                                passHref
-                                key={page}
-                                href={page === 'Home' ? '/' : '/'.concat(page.replace(/ /g,"_"))}
-                            >
                                 <div className={`${isCurrentPage(asPath.slice(1), page.replace(/ /g,"_")) ? "activeDrawerLink" : 'headerDrawerLink'}`} ><a>{page}</a></div>
-                            </Link>
                         }></ListItemText>
                     </ListItem>
+                    </Link>
                 ))}
            </List>
        </Box>

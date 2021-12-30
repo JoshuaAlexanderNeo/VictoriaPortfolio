@@ -16,7 +16,7 @@ import { useRouter } from 'next/router';
 import LeftDrawer from '../LeftDrawer';
 import isCurrentPage from '../Utils';
 
-const pages = ['Home', 'Projects', 'About', 'Contact'];
+const pages = ['Home', 'About', 'Projects', 'Contact'];
 
 const ResponsiveAppBar = () => {
 
@@ -37,6 +37,12 @@ const ResponsiveAppBar = () => {
   if(asPath === '/') {
     appBarColor = 'transparent'
     elevation = 0;
+  }
+
+
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
   }
 
   return (
