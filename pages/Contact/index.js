@@ -20,7 +20,7 @@ export default function Home() {
             <div style={{ justifyContent: "center", display: "grid"}}>
               <Typography gutterBottom variant="h3">Contact me</Typography>
               <Link passHref href='https://www.linkedin.com/in/vsukiasova'><Typography className="clickableLink" gutterBottom variant="h5"><LinkedInIcon color="secondary" sx={{ mb: -2, fontSize: "50px" }} />www.linkedin.com/in/vsukiasova</Typography></Link>
-              <Link passHref href='mailto:SUKYASOVA.VIKA@GMAIL.COM'><Typography className="clickableLink" gutterBottom variant="h5"><EmailIcon color="secondary" sx={{ mb: -2, fontSize: "50px" }} />sukyasova.vika@gmail.com</Typography></Link>
+              <Link passHref href='mailto:v.sukiasova@gmail.com'><Typography className="clickableLink" gutterBottom variant="h5"><EmailIcon color="secondary" sx={{ mb: -2, fontSize: "50px" }} />v.sukiasova@gmail.com</Typography></Link>
             </div>
             <div style={{ justifyContent: "center", display: "flex", marginTop: "30px" }}>
               <Image src={avatar} alt="avatar" quality={100} objectFit="cover" sx={{ mb: "20px" }} />
