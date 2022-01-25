@@ -53,10 +53,7 @@ const Hero = ({title, subtitle }) => {
             container
             className={"hero-component " + (width < 1200 ? "mobileBackground" : null)}
             sx={{
-                position: `relative`,
-                width: `100%`,
-                overflow: `hidden`,
-                mt: -8
+                height: "100vh",
             }}
         >
             {width > 900 ? <Image priority src={hero} alt="hero" quality={100} layout="fill" objectFit="cover" placeholder="blur" /> : null  }
